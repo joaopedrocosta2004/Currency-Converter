@@ -13,20 +13,26 @@ def Interface():
     currency_codes = currency_rates_instance.get_rates("USD")
 
     for code in currency_codes:
+        # These for prints all the currency codes
         print("current currency code: " + code)
 
-    currency1, currency2 = input("What would you like to convert? ").split(" ")
+    currency1, currency2 = input("What would you like to convert: ").split(" ")
     
     currency1 = currency1.upper()
     currency2 = currency2.upper()
     
+    # Here takes the currency code and converts it to the desired currency
     print(currency_rates_instance.convert(currency1, currency2, 1))
-    
-    
     
     
 
 def main():
-    Interface()
+    while True:
+        Interface()
+        print("Would you like to continue? (y/n)")
+        if input().lower() == "y":
+            continue
+        else:
+            break
 
 main()
