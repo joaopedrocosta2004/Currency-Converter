@@ -8,7 +8,6 @@ from forex_python.converter import CurrencyRates as CurrencyRatesClass
 def get_valid_currency_codes():
     # Using the forex-python library to get a list of currency codes
     currency_rates_instance = CurrencyRatesClass()
-    # Using "USD" as the base currency
     currency_codes = currency_rates_instance.get_rates("THB")
     return currency_codes
 
