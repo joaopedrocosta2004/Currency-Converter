@@ -1,6 +1,6 @@
 # Currency converter
 # Joao Pedro Costa
-# This is a simple program to convert currencies, using an API to convert it in real-time.
+# This is a simple program to convert currencies in real-time.
 
 from forex_python.converter import CurrencyRates as CurrencyRatesClass
 
